@@ -43,6 +43,7 @@ if(isset($_POST['app-submit']))
 
         if(mysqli_num_rows($check_query)==0){
           $query=mysqli_query($con,"insert into appointmenttb(pid,fname,lname,gender,email,contact,doctor,docFees,appdate,apptime,userStatus,doctorStatus) values($pid,'$fname','$lname','$gender','$email','$contact','$doctor','$docFees','$appdate','$apptime','1','1')");
+          echo $query
 
           if($query)
           {
